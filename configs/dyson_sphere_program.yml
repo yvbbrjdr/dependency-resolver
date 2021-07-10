@@ -227,3 +227,29 @@ Storage Tank:
   - name: Glass
     quantity: 4
   time: 2
+
+# Level III
+
+Sorter MK.I:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 1
+  - name: Circuit Board
+    quantity: 1
+  time: 1
+
+Sorter MK.II:
+  dependencies:
+  - name: Sorter MK.I
+    quantity: 1
+  - name: Electric Motor
+    quantity: 0.5
+  time: 0.5
+
+Sorter MK.III:
+  dependencies:
+  - name: Sorter MK.II
+    quantity: 1 
+  - name: Electromagnetic Turbine
+    quantity: 0.5
+  time: 0.5
