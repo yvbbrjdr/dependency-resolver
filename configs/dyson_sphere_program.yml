@@ -1,0 +1,61 @@
+# Components
+
+# Level I
+
+Iron Ore:
+  dependencies: []
+  time: 0
+
+Copper Ore:
+  dependencies: []
+  time: 0
+
+# Level II
+
+Iron Ingot:
+  dependencies:
+  - name: Iron Ore
+    quantity: 1
+  time: 1
+
+Copper Ingot:
+  dependencies:
+  - name: Copper Ore
+    quantity: 1
+  time: 1
+
+# Level III
+
+Magnet:
+  dependencies:
+  - name: Iron Ore
+    quantity: 1
+  time: 1.5
+
+Magnetic Coil:
+  dependencies:
+  - name: Magnet
+    quantity: 1
+  - name: Copper Ingot
+    quantity: 0.5
+  time: 0.5
+
+# Level IV
+
+Circuit Board:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 1
+  - name: Copper Ingot
+    quantity: 0.5
+  time: 0.5
+
+# Level VII
+
+Electromagnetic Matrix:
+  dependencies:
+  - name: Magnetic Coil
+    quantity: 1
+  - name: Circuit Board
+    quantity: 1
+  time: 3
