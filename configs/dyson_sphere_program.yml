@@ -40,6 +40,12 @@ Copper Ingot:
     quantity: 1
   time: 1
 
+Stone Brick:
+  dependencies:
+  - name: Stone
+    quantity: 1
+  time: 1
+
 Energetic Graphite:
   dependencies:
   - name: Coal
@@ -78,6 +84,12 @@ Magnetic Coil:
     quantity: 0.5
   time: 0.5
 
+Glass:
+  dependencies:
+  - name: Stone
+    quantity: 2
+  time: 2
+
 Graphene:
   dependencies:
   - name: Energetic Graphite
@@ -87,6 +99,12 @@ Graphene:
   time: 1.5
 
 # Level IV
+
+Steel:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 3
+  time: 3
 
 Circuit Board:
   dependencies:
@@ -173,3 +191,39 @@ Conveyor Belt MK.III:
   - name: Graphene
     quantity: 0.3333333333333333
   time: 0.3333333333333333
+
+Splitter:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 3
+  - name: Gear
+    quantity: 2
+  - name: Circuit Board
+    quantity: 1
+  time: 2
+
+Storage MK.I:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 4
+  - name: Stone Brick
+    quantity: 4
+  time: 2
+
+Storage MK.II:
+  dependencies:
+  - name: Steel
+    quantity: 8
+  - name: Stone Brick
+    quantity: 8
+  time: 4
+
+Storage Tank:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 8
+  - name: Stone Brick
+    quantity: 4
+  - name: Glass
+    quantity: 4
+  time: 2
