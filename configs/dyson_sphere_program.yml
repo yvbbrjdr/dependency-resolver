@@ -10,6 +10,22 @@ Copper Ore:
   dependencies: []
   time: 0
 
+Stone:
+  dependencies: []
+  time: 0
+
+Coal:
+  dependencies: []
+  time: 0
+
+Water:
+  dependencies: []
+  time: 0
+
+Crude Oil:
+  dependencies: []
+  time: 0
+
 # Level II
 
 Iron Ingot:
@@ -23,6 +39,28 @@ Copper Ingot:
   - name: Copper Ore
     quantity: 1
   time: 1
+
+Energetic Graphite:
+  dependencies:
+  - name: Coal
+    quantity: 2
+  time: 2
+
+Sulfuric Acid:
+  dependencies:
+  - name: Refined Oil
+    quantity: 1.5
+  - name: Stone
+    quantity: 2
+  - name: Water
+    quantity: 1
+  time: 1.5
+
+Refined Oil:
+  dependencies:
+  - name: Crude Oil
+    quantity: 1
+  time: 2
 
 # Level III
 
@@ -40,6 +78,14 @@ Magnetic Coil:
     quantity: 0.5
   time: 0.5
 
+Graphene:
+  dependencies:
+  - name: Energetic Graphite
+    quantity: 1.5
+  - name: Sulfuric Acid
+    quantity: 0.5
+  time: 1.5
+
 # Level IV
 
 Circuit Board:
@@ -50,6 +96,44 @@ Circuit Board:
     quantity: 0.5
   time: 0.5
 
+Electric Motor:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 2
+  - name: Gear
+    quantity: 1
+  - name: Magnetic Coil
+    quantity: 1
+  time: 2
+
+# Level V
+
+Gear:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 1
+  time: 1
+
+Electromagnetic Turbine:
+  dependencies:
+  - name: Electric Motor
+    quantity: 2
+  - name: Magnetic Coil
+    quantity: 2
+  time: 2
+
+# Level VI
+
+Super-Magnetic Ring:
+  dependencies:
+  - name: Electromagnetic Turbine
+    quantity: 2
+  - name: Magnet
+    quantity: 3
+  - name: Energetic Graphite
+    quantity: 1
+  time: 3
+
 # Level VII
 
 Electromagnetic Matrix:
@@ -59,3 +143,33 @@ Electromagnetic Matrix:
   - name: Circuit Board
     quantity: 1
   time: 3
+
+# Buildings
+
+# Level II
+
+Conveyor Belt MK.I:
+  dependencies:
+  - name: Iron Ingot
+    quantity: 0.6666666666666667
+  - name: Gear
+    quantity: 0.3333333333333333
+  time: 0.3333333333333333
+
+Conveyor Belt MK.II:
+  dependencies:
+  - name: Conveyor Belt MK.I
+    quantity: 1
+  - name: Electromagnetic Turbine
+    quantity: 0.3333333333333333
+  time: 0.3333333333333333
+
+Conveyor Belt MK.III:
+  dependencies:
+  - name: Conveyor Belt MK.II
+    quantity: 1
+  - name: Super-Magnetic Ring
+    quantity: 0.3333333333333333
+  - name: Graphene
+    quantity: 0.3333333333333333
+  time: 0.3333333333333333
